@@ -1,0 +1,26 @@
+{
+  "name": "@nahid.rezvee/express",
+  "version": "1.0.0",
+  "description": "CLI tool to generate Express.js app and boilerplates for rest api.",
+  "main": "index.js",
+  "keywords": [
+    "express js",
+    "cli",
+    "express cli",
+    "express structure",
+    "express generator",
+    "express boilerplate"
+  ],
+  "author": "Md. Abdun Nahid <abdun.nahid@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "chalk-animation": "^1.6.0",
+    "copy-dir": "^0.4.0",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.0"
+  },
+  "bin": {
+    "nahidx": "./index.js"
+  }
+}

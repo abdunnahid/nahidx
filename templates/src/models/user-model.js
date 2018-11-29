@@ -1,0 +1,25 @@
+const mongoose = require('mongoose');
+const Joi = require('Joi');
+
+const userSchema = new mongoose.Schema({
+    email:              { type: String, minlength: 6, maxlength: 255, required: true, lowercase: true, unique: true },
+    fName:              { type: String, minlength: 2, maxlength: 50 },
+    lName:              { type: String, minlength: 2, maxlength: 50 },
+    password:           { type: String, minlength: 6, maxlength: 1024 }
+});
+
+const User = mongoose.model('User', userSchema);
+
+
+const validateUser = (user) => {
+    const schema = {
+        email:              Joi.string().min(6).max(255).email().required(),
+        fName:              Joi.string().min(2).max(50).required(),
+        lName:              Joi.string().min(2).max(50).required(),
+        password:           Joi.string().min(6).max(255).required()
+    };
+    return Joi.validate(user, schema);
+};
+
+module.exports.validateUser = validateUser;
+module.exports.User = User;
