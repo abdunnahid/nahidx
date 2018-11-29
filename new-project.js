@@ -43,10 +43,7 @@ function createStructure() {
     return new Promise(async (res, rej) => {
 
         const nodePath = await GLOBAL_NODE_MODULE_PATH();
-        const newProjectSrc = `${nodePath}/@nahid.rezvee/express-cli/templates/src`;
-
-        console.log("dsfsdfdsfsdf", newProjectSrc);
-        
+        const newProjectSrc = `${nodePath}/@nahidrezvee/express-cli/templates/src`;        
 
         copydir(newProjectSrc, process.cwd(), (err) => {
             if (err) {

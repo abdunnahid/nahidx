@@ -63,7 +63,7 @@ function addToIndexModule(filename) {
 const createRoute = async (filePath) => {
 
     const nodePath = await GLOBAL_NODE_MODULE_PATH();
-    const routerTemplate = `${nodePath}/@nahid.rezvee/express-cli/templates/route.js`;
+    const routerTemplate = `${nodePath}/@nahidrezvee/express-cli/templates/route.js`;
 
     return new Promise(async (resolve, reject) => {
 

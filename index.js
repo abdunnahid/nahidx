@@ -66,14 +66,3 @@ const run = async () => {
 };
 
 run();
-
-// const { GLOBAL_NODE_MODULE_PATH } = require('./node-path');
-
-// async function test() {
-//     const nodePath = await GLOBAL_NODE_MODULE_PATH();
-
-//     console.log("Node Path", nodePath);
-    
-// }
-
-// test();
