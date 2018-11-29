@@ -1,5 +1,3 @@
-const inquirer = require("inquirer");
-const fs = require('fs');
 const exec = require("child_process").exec
 const copydir = require('copy-dir');
 const chalkAnimation = require('chalk-animation');
@@ -45,7 +43,10 @@ function createStructure() {
     return new Promise(async (res, rej) => {
 
         const nodePath = await GLOBAL_NODE_MODULE_PATH();
-        const newProjectSrc = `${nodePath}/NahidExpress/templates/src`;
+        const newProjectSrc = `${nodePath}/@nahid.rezvee/express-cli/templates/src`;
+
+        console.log("dsfsdfdsfsdf", newProjectSrc);
+        
 
         copydir(newProjectSrc, process.cwd(), (err) => {
             if (err) {

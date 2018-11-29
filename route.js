@@ -2,7 +2,6 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 const { GLOBAL_NODE_MODULE_PATH } = require('./node-path');
 
-
 module.exports = () => {
 
     return new Promise(async (res, rej) => {
@@ -64,7 +63,7 @@ function addToIndexModule(filename) {
 const createRoute = async (filePath) => {
 
     const nodePath = await GLOBAL_NODE_MODULE_PATH();
-    const routerTemplate = `${nodePath}/NahidExpress/templates/route.js`;
+    const routerTemplate = `${nodePath}/@nahid.rezvee/express-cli/templates/route.js`;
 
     return new Promise(async (resolve, reject) => {
 
